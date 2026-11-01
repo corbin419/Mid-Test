@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>網頁前端初體驗</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="container navbar" aria-label="主要導覽">
+        <a class="logo" href="#home"> <span>&lt;/&gt;</span> 網頁前端入門 </a>
+
+        <div class="nav-links">
+          <a href="#home">課程介紹</a>
+          <a href="#lessons">單元內容</a>
+          <a href="#task">學習任務</a>
+          <a href="./TestPage/Test.html">小測驗</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 課程介紹 -->
+      <section class="hero" id="home">
+        <div class="container hero-layout">
+          <div>
+            <p class="eyebrow">FRONTEND FOR BEGINNERS</p>
+            <h1>網頁前端初體驗</h1>
+            <h2>用 <span>HTML 與 CSS</span><br />製作個人介紹卡</h2>
+            <p class="hero-description">從認識網頁到完成作品，開始你的第一堂前端課。</p>
+
+            <div class="tags">
+              <span>零基礎入門</span>
+              <span>3 個單元</span>
+              <span>約 13 分鐘</span>
+            </div>
+            <a class="button" href="#lessons">開始學習 →</a>
+            <a class="button" href="file/course.pdf" download> 下載 PDF 講義 </a>
+          </div>
+
+          <!-- 用 HTML 與 CSS 製作的示範卡片 -->
+          <div class="browser-preview">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+
+            <div class="profile-preview">
+              <div class="avatar" aria-hidden="true">👩🏻‍💻</div>
+              <h3>王大槌</h3>
+              <p class="profile-label">前端學習者</p>
+              <p>喜歡設計與前端開發，<br />用程式創造更好的生活。</p>
+              <div class="code-tags">
+                <span class="orange">HTML</span>
+                <span class="blue">CSS</span>
+                <span class="purple">React</span>
+                <span class="green">Vue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 課程單元 -->
+      <section class="container lessons" id="lessons">
+        <div class="section-heading">
+          <h2>課程單元</h2>
+          <p>一步一步，打造你的第一張個人介紹卡。</p>
+        </div>
+
+        <!-- 第一單元：影片左、文字右 -->
+        <article class="lesson-card">
+          <a
+            class="lesson-video youtube-link"
+            href="https://youtu.be/D74YzHXy2bI"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="前往 YouTube 觀看單元一：認識網頁前端（另開分頁）">
+            <img src="../IMG/part1.png" alt="單元一：認識網頁前端影片封面" loading="lazy" />
+          </a>
+
+          <div class="lesson-content">
+            <span class="lesson-label">單元 01 ／ 約 4 分鐘</span>
+            <h3>認識網頁前端</h3>
+            <p>了解 HTML 與 CSS 的分工，看看網頁如何從結構變成畫面。</p>
+            <ul>
+              <li>HTML：內容與結構</li>
+              <li>CSS：樣式與外觀</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 第二單元：影片右、文字左 -->
+        <article class="lesson-card">
+          <div class="lesson-content">
+            <span class="lesson-label">單元 02 ／ 約 5 分鐘</span>
+            <h3>使用HTML建立內容</h3>
+            <p>加入姓名、自我介紹，建立介紹卡基本功能</p>
+            <ul>
+              <li>認識常用標籤</li>
+              <li>修改個人資訊</li>
+            </ul>
+          </div>
+
+          <a
+            class="lesson-video youtube-link"
+            href="https://youtu.be/rQRbaZ-hVwU"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="前往 YouTube 觀看單元一：認識網頁前端（另開分頁）">
+            <img src="../IMG/part2.png" alt="單元二：建立卡片內容" loading="lazy" />
+          </a>
+        </article>
+
+        <!-- 第三單元：影片左、文字右 -->
+        <article class="lesson-card">
+          <a
+            class="lesson-video youtube-link"
+            href="https://youtu.be/UIMlezlmfpA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="前往 YouTube 觀看單元一：認識網頁前端（另開分頁）">
+            <img src="../IMG/part3.png" alt="單元三：CSS美化" loading="lazy" />
+          </a>
+
+          <div class="lesson-content">
+            <span class="lesson-label">單元 03 ／ 約 15 分鐘</span>
+            <h3>用CSS美化外觀</h3>
+            <p>調整顏色、字體與間距，打造具有個人風格的介紹卡。</p>
+            <ul>
+              <li>設定背景、字體與圓角</li>
+              <li>比較美化前後的差異</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 學習任務 -->
+        <section class="task" id="task" aria-labelledby="task-title">
+          <span class="task-icon" aria-hidden="true">✓</span>
+          <div>
+            <h2 id="task-title">換你動手做！</h2>
+            <p>修改姓名、自我介紹與背景顏色，完成後繳交作品截圖。</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>網頁前端入門｜數位學習內容設計</p>
+    </footer>
+  </body>
+</html>
