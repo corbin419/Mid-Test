@@ -1,0 +1,337 @@
+/* 基本設定 */
+:root {
+  --primary: #00899a;
+  --primary-dark: #006b79;
+  --text: #172c46;
+  --muted: #5f7085;
+  --border: #dfe9ef;
+}
+
+/* 基本設定 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6fafb;
+  color: #172c46;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  line-height: 1.7;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #00899a;
+  outline-offset: 4px;
+}
+
+.container {
+  width: calc(100% - 40px);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* 導覽列 */
+.header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 76px;
+  width: calc(100% - 48px);
+  max-width: 1120px;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  line-height: 1.7;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo span {
+  margin-right: 8px;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  font-size: 15px;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.navbar a:focus-visible {
+  outline-offset: 5px;
+}
+
+/* 測驗介紹 */
+main {
+  padding: 40px 0;
+}
+
+.intro {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #006b79;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 5vw, 42px);
+  line-height: 1.4;
+}
+
+.description {
+  margin: 0;
+  color: #5f7085;
+}
+
+.progress {
+  margin-top: 16px;
+  color: #006b79;
+  font-weight: bold;
+}
+
+/* 題目卡片 */
+.question-card {
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #dfe9ef;
+  border-radius: 16px;
+}
+
+.question-card legend {
+  max-width: 100%;
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 16px;
+  border: 1px solid #dfe9ef;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.option:hover {
+  background: #f1f9f9;
+}
+
+.option:has(input:checked) {
+  background: #eaf7f7;
+  border-color: #00899a;
+}
+
+.option input {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin: 5px 0 0;
+  accent-color: #00899a;
+}
+
+.option:has(input:disabled) {
+  cursor: default;
+}
+
+/* 作答後的正確與錯誤選項 */
+.option.correct {
+  background: #edf8f0;
+  border-color: #26804b;
+}
+
+.option.wrong {
+  background: #fff1f0;
+  border-color: #be4545;
+}
+
+.feedback {
+  margin: 16px 0 0;
+  padding: 14px;
+  background: #f3f6f8;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* 操作按鈕 */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button {
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 10px;
+  background: #00899a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #006b79;
+}
+
+.button.secondary {
+  background: white;
+  color: #006b79;
+  border: 1px solid #00899a;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* 成績區 */
+.result {
+  margin-top: 24px;
+  padding: 24px;
+  background: #eaf7f7;
+  border: 1px solid #b8dfe2;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.result h2 {
+  margin: 0 0 8px;
+}
+
+.result p {
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+footer {
+  padding: 0 20px 28px;
+  color: #5f7085;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* 手機版 */
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  main {
+    padding: 24px 0;
+  }
+
+  .question-card {
+    padding: 18px 14px;
+  }
+
+  .question-card legend {
+    font-size: 16px;
+  }
+
+  .option {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+/* 與首頁、課程頁、學習任務頁一致的導覽列 RWD */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    width: calc(100% - 32px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 4px 20px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    width: calc(100% - 24px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a {
+    transition: none;
+  }
+}

@@ -55,32 +55,44 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding-block: 18px;
+  min-height: 76px;
+  width: calc(100% - 48px);
+  max-width: 1120px;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  line-height: 1.7;
 }
 
 .logo {
-  color: var(--primary-dark);
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo span {
+  margin-right: 8px;
+  color: var(--primary);
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  gap: 28px;
+  font-size: 15px;
 }
 
 .nav-links a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links a[aria-current='page'] {
-  color: var(--primary-dark);
-  text-decoration: underline;
-  text-underline-offset: 6px;
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.navbar a:focus-visible {
+  outline-offset: 5px;
 }
 
 /* 頁首介紹 */
@@ -335,15 +347,30 @@ footer {
   text-align: center;
 }
 
-/* 手機版 */
+/* 平板與手機版 */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
+    width: calc(100% - 32px);
     flex-direction: column;
+    justify-content: center;
     gap: 8px;
+    padding: 16px 0;
+  }
+
+  .logo {
+    font-size: 20px;
   }
 
   .nav-links {
     justify-content: center;
+    gap: 4px 20px;
+    font-size: 14px;
   }
 
   .task-card {
@@ -390,5 +417,11 @@ footer {
 
   .button {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a {
+    transition: none;
   }
 }
