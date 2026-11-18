@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>學習任務｜網頁前端入門</title>
+    <link rel="stylesheet" href="./Task.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="container navbar" aria-label="主要導覽">
+        <a class="logo" href="../index.html"> &lt;/&gt; 網頁前端入門 </a>
+
+        <div class="nav-links">
+          <a href="../index.html">首頁</a>
+          <a href="./TaskPage/Task.html">學習任務</a>
+          <a href="./LessonPage/Lessons.html">單元內容</a>
+          <a href="./TestPage/Test.html">小測驗</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <p class="eyebrow">LEARNING TASK</p>
+        <h1>換你動手做！</h1>
+        <p>運用 HTML 與 CSS，完成自己的個人介紹卡。 遇到問題時，可以回到課程影片查看示範。</p>
+        <span class="tag">適合完成三個單元後練習</span>
+      </section>
+
+      <!-- 任務一 -->
+      <section class="task-card" aria-labelledby="task-one">
+        <div class="task-heading">
+          <span class="step-number" aria-hidden="true">01</span>
+          <div>
+            <p class="step-label">建立內容</p>
+            <h2 id="task-one">製作你的個人介紹卡</h2>
+          </div>
+        </div>
+
+        <p>
+          開啟課程中的介紹卡範例，將內容換成自己的資料。
+          若不想使用真實個資，也可以使用暱稱與示意圖片。
+        </p>
+
+        <ul class="requirements">
+          <li>使用標題標籤，放入你的姓名或暱稱。</li>
+          <li>使用段落標籤，寫一段自我介紹。</li>
+          <li>加入一張有權使用的圖片，並填寫替代文字。</li>
+          <li>加入一個可以正常開啟的網站連結。</li>
+        </ul>
+
+        <div class="tip">
+          <strong>小提醒</strong>
+          <p>修改後先儲存檔案，再重新整理瀏覽器， 確認畫面有顯示新的內容。</p>
+        </div>
+      </section>
+
+      <!-- 任務二 -->
+      <section class="task-card" aria-labelledby="task-two">
+        <div class="task-heading">
+          <span class="step-number" aria-hidden="true">02</span>
+          <div>
+            <p class="step-label">調整外觀</p>
+            <h2 id="task-two">設計自己的卡片風格</h2>
+          </div>
+        </div>
+
+        <p>從下列項目中，選擇至少兩項進行修改。 每次先預測效果，再修改程式碼並觀察結果。</p>
+
+        <div class="style-grid">
+          <div class="style-item">
+            <h3>背景顏色</h3>
+            <code>background-color</code>
+            <p>替網頁或卡片換一個背景色。</p>
+          </div>
+
+          <div class="style-item">
+            <h3>文字大小</h3>
+            <code>font-size</code>
+            <p>讓姓名與自我介紹有清楚的大小差異。</p>
+          </div>
+
+          <div class="style-item">
+            <h3>內部間距</h3>
+            <code>padding</code>
+            <p>調整內容與卡片邊緣的距離。</p>
+          </div>
+
+          <div class="style-item">
+            <h3>卡片圓角</h3>
+            <code>border-radius</code>
+            <p>觀察不同圓角大小帶來的外觀變化。</p>
+          </div>
+        </div>
+
+        <div class="tip">
+          <strong>想一想</strong>
+          <p>你的文字是否容易閱讀？顏色會不會太接近背景？ 間距是否讓內容擠在一起？</p>
+        </div>
+      </section>
+
+      <!-- 自我檢查 -->
+      <section class="task-card" aria-labelledby="task-three">
+        <div class="task-heading">
+          <span class="step-number" aria-hidden="true">03</span>
+          <div>
+            <p class="step-label">檢查成果</p>
+            <h2 id="task-three">我的作品完成了嗎？</h2>
+          </div>
+        </div>
+
+        <p>請實際開啟作品，確認後再勾選。</p>
+
+        <div class="checklist">
+          <label>
+            <input type="checkbox" />
+            <span>姓名與自我介紹已換成自己的內容。</span>
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            <span>圖片可以正常顯示，且有填寫 alt 替代文字。</span>
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            <span>點擊連結後，可以前往正確的網站。</span>
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            <span>已自行修改至少兩項 CSS 樣式。</span>
+          </label>
+
+          <label>
+            <input type="checkbox" />
+            <span>縮小瀏覽器視窗後，內容仍能清楚閱讀。</span>
+          </label>
+        </div>
+
+        <p class="note">此清單僅供自我檢查，不會自動儲存或提交。</p>
+      </section>
+
+      <!-- 學習反思與成果整理 -->
+      <section class="task-card" aria-labelledby="task-four">
+        <div class="task-heading">
+          <span class="step-number" aria-hidden="true">04</span>
+          <div>
+            <p class="step-label">說明與整理</p>
+            <h2 id="task-four">留下你的作品與修改紀錄</h2>
+          </div>
+        </div>
+
+        <p>請將以下內容整理好，依老師指定的方式繳交：</p>
+
+        <ol class="requirements">
+          <li>介紹卡完成畫面的截圖。</li>
+          <li>HTML、CSS 與使用的圖片檔案。</li>
+          <li>一段簡短的修改說明，可參考下列問題。</li>
+        </ol>
+
+        <div class="reflection">
+          <h3>修改說明</h3>
+          <ul class="requirements">
+            <li>我修改了哪兩個 CSS 屬性？</li>
+            <li>修改前後，畫面有什麼差異？</li>
+            <li>我遇到了什麼問題？如何處理？</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 問題排解 -->
+      <section class="help-section" aria-labelledby="help-title">
+        <h2 id="help-title">遇到問題？先檢查這裡</h2>
+
+        <details>
+          <summary>修改程式碼後，畫面沒有變化</summary>
+          <p>先確認檔案已儲存，再重新整理瀏覽器。 也要確認開啟的是正在編輯的那一份 HTML。</p>
+        </details>
+
+        <details>
+          <summary>圖片沒有顯示</summary>
+          <p>檢查 src 中的路徑、檔名、大小寫與副檔名， 是否和實際的圖片檔案一致。</p>
+        </details>
+
+        <details>
+          <summary>CSS 樣式沒有出現</summary>
+          <p>確認 HTML 有正確連結 CSS 檔案， 並檢查 HTML 的 class 名稱與 CSS 選擇器是否一致。</p>
+        </details>
+      </section>
+
+      <div class="actions">
+        <a class="button secondary" href="../LessonPage/Lessons.html"> 回到課程複習 </a>
+        <a class="button" href="../TestPage/Test.html"> 前往課後測驗 → </a>
+      </div>
+    </main>
+
+    <footer>網頁前端入門｜數位學習內容設計</footer>
+  </body>
+</html>

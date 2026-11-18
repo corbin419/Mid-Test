@@ -14,8 +14,8 @@
 
         <div class="nav-links">
           <a href="#home">課程介紹</a>
-          <a href="#lessons">單元內容</a>
-          <a href="#task">學習任務</a>
+          <a href="./TaskPage/Task.html">學習任務</a>
+          <a href="./LessonPage/Lessons.html">單元內容</a>
           <a href="./TestPage/Test.html">小測驗</a>
         </div>
       </nav>
@@ -36,7 +36,7 @@
               <span>3 個單元</span>
               <span>約 13 分鐘</span>
             </div>
-            <a class="button" href="#lessons">開始學習 →</a>
+            <a class="button" href="#start">第一次學？從這裡開始 →</a>
             <a class="button" href="file/course.pdf" download> 下載 PDF 講義 </a>
           </div>
 
@@ -60,87 +60,140 @@
         </div>
       </section>
 
-      <!-- 課程單元 -->
-      <section class="container lessons" id="lessons">
+      <!-- 新手學習指引 -->
+      <section class="container beginner-guide" id="start" aria-labelledby="guide-title">
         <div class="section-heading">
-          <h2>課程單元</h2>
-          <p>一步一步，打造你的第一張個人介紹卡。</p>
+          <h2 id="guide-title">開始前，先看這裡</h2>
+          <p>不需要程式基礎，跟著步驟，完成你的第一張個人介紹卡。</p>
         </div>
 
-        <!-- 第一單元：影片左、文字右 -->
-        <article class="lesson-card">
-          <a
-            class="lesson-video youtube-link"
-            href="https://youtu.be/D74YzHXy2bI"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="前往 YouTube 觀看單元一：認識網頁前端（另開分頁）">
-            <img src="./IMG/part1.png" alt="單元一：認識網頁前端影片封面" loading="lazy" />
-          </a>
+        <!-- 課程對象與先備條件 -->
+        <div class="guide-notice">
+          <h3>這門課適合誰？</h3>
+          <p>
+            適合沒有 HTML 與 CSS 經驗的初學者。 只要會輸入文字、建立資料夾與儲存檔案，就能開始練習。
+            建議使用電腦，一邊觀看教學，一邊操作。
+          </p>
+          <p class="guide-time">教學影片約 13 分鐘；實作請依自己的速度暫停、重看與練習。</p>
+        </div>
 
-          <div class="lesson-content">
-            <span class="lesson-label">單元 01 ／ 約 4 分鐘</span>
-            <h3>認識網頁前端</h3>
-            <p>了解 HTML 與 CSS 的分工，看看網頁如何從結構變成畫面。</p>
-            <ul>
-              <li>HTML：內容與結構</li>
-              <li>CSS：樣式與外觀</li>
+        <div class="guide-grid">
+          <!-- 學習目標 -->
+          <article class="guide-panel">
+            <span class="guide-tag">學習目標</span>
+            <h3>學完後，你可以做到什麼？</h3>
+
+            <ul class="guide-list">
+              <li>分辨 HTML 的內容結構與 CSS 的外觀設定。</li>
+              <li>使用標籤加入姓名、自我介紹、照片與連結。</li>
+              <li>修改背景顏色、文字大小與卡片圓角。</li>
+              <li>完成一張自己的個人介紹卡。</li>
             </ul>
+          </article>
+
+          <!-- 工具準備 -->
+          <article class="guide-panel">
+            <span class="guide-tag">工具準備</span>
+            <h3>開始前，準備這些工具</h3>
+
+            <ul class="guide-list">
+              <li><strong>電腦：</strong>用來建立檔案與修改程式碼。</li>
+              <li><strong>瀏覽器：</strong>例如 Chrome 或 Edge，查看網頁成果。</li>
+              <li><strong>程式碼編輯器：</strong>本課程以 VS Code 操作。</li>
+              <li><strong>一張圖片：</strong>自己的照片或有權使用的圖片。</li>
+            </ul>
+
+            <p class="guide-note">基礎練習不需要 GitHub 帳號，先在自己的電腦完成作品即可。</p>
+          </article>
+        </div>
+
+        <!-- 預期成果 -->
+        <article class="guide-outcome">
+          <div class="guide-outcome-copy">
+            <span class="guide-tag">完成成果</span>
+            <h3>你的任務：製作我的個人介紹卡</h3>
+            <p>
+              參考右方示意，建立一張介紹自己的網頁卡片。
+              內容與配色可以自由調整，不必和範例完全相同。
+            </p>
+
+            <h4>完成後，請確認：</h4>
+            <ul class="guide-list">
+              <li>顯示自己的姓名與一段自我介紹。</li>
+              <li>圖片能正常顯示，並提供圖片替代文字。</li>
+              <li>包含一個能正常開啟的連結。</li>
+              <li>自行修改至少兩項 CSS 樣式。</li>
+            </ul>
+
+            <p class="guide-note">
+              完成作品後，儲存畫面截圖，並說明： 「我修改了哪些樣式？畫面有什麼變化？」
+            </p>
           </div>
+
+          <!-- 不需額外圖片檔的成果示意 -->
+          <figure class="guide-preview">
+            <div class="guide-demo-card">
+              <div class="guide-demo-avatar" aria-hidden="true">👩🏻‍💻</div>
+              <h4>你的名字</h4>
+              <p class="guide-demo-role">前端學習者</p>
+              <p>我喜歡設計與攝影，<br />這是我的第一張介紹卡！</p>
+              <span class="guide-demo-link">個人連結位置</span>
+            </div>
+            <figcaption>完成成果示意｜內容與樣式可自行調整</figcaption>
+          </figure>
         </article>
 
-        <!-- 第二單元：影片右、文字左 -->
-        <article class="lesson-card">
-          <div class="lesson-content">
-            <span class="lesson-label">單元 02 ／ 約 5 分鐘</span>
-            <h3>使用HTML建立內容</h3>
-            <p>加入姓名、自我介紹，建立介紹卡基本功能</p>
-            <ul>
-              <li>認識常用標籤</li>
-              <li>修改個人資訊</li>
-            </ul>
-          </div>
+        <!-- 操作順序 -->
+        <article class="guide-panel guide-process">
+          <span class="guide-tag">操作步驟</span>
+          <h3>照著這個順序開始</h3>
 
-          <a
-            class="lesson-video youtube-link"
-            href="https://youtu.be/rQRbaZ-hVwU"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="前往 YouTube 觀看單元一：認識網頁前端（另開分頁）">
-            <img src="./IMG/part2.png" alt="單元二：建立卡片內容" loading="lazy" />
-          </a>
+          <ol class="guide-steps">
+            <li>
+              <strong>準備檔案</strong>
+              <p>建立練習資料夾，準備 HTML、CSS 與圖片。</p>
+            </li>
+            <li>
+              <strong>認識網頁前端</strong>
+              <p>觀看單元一，了解 HTML 與 CSS 的分工。</p>
+            </li>
+            <li>
+              <strong>建立卡片內容</strong>
+              <p>跟著單元二，加入姓名、介紹、照片與連結。</p>
+            </li>
+            <li>
+              <strong>美化並完成作品</strong>
+              <p>跟著單元三修改樣式，再完成課後測驗。</p>
+            </li>
+          </ol>
+
+          <!-- 可展開的零基礎操作說明 -->
+          <details class="guide-help">
+            <summary>第一次建立網頁檔案？查看準備步驟</summary>
+
+            <ol>
+              <li>在電腦上建立一個資料夾，命名為 my-card。</li>
+              <li>開啟 VS Code，透過「開啟資料夾」選取 my-card。</li>
+              <li>在資料夾內新增 <code>index.html</code> 與 <code>style.css</code> 兩個檔案。</li>
+              <li>
+                將圖片放入同一個資料夾。若使用 JPG 圖片， 可以命名為 <code>avatar.jpg</code>；
+                其他格式請保留正確副檔名，並在 HTML 使用一致的檔名。
+              </li>
+              <li>
+                跟著單元教學輸入程式碼並儲存， 再用瀏覽器開啟 <code>index.html</code> 查看成果。
+              </li>
+            </ol>
+
+            <p>
+              每次修改後，記得先儲存檔案，再重新整理瀏覽器。
+              目前只要在電腦開啟網頁，不需要先發布到網路。
+            </p>
+          </details>
+
+          <div class="guide-actions">
+            <a class="button" href="./LessonPage/Lessons.html">準備好了，進入單元一 →</a>
+          </div>
         </article>
-
-        <!-- 第三單元：影片左、文字右 -->
-        <article class="lesson-card">
-          <a
-            class="lesson-video youtube-link"
-            href="https://youtu.be/UIMlezlmfpA"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="前往 YouTube 觀看單元一：認識網頁前端（另開分頁）">
-            <img src="./IMG/part3.png" alt="單元三：CSS美化" loading="lazy" />
-          </a>
-
-          <div class="lesson-content">
-            <span class="lesson-label">單元 03 ／ 約 15 分鐘</span>
-            <h3>用CSS美化外觀</h3>
-            <p>調整顏色、字體與間距，打造具有個人風格的介紹卡。</p>
-            <ul>
-              <li>設定背景、字體與圓角</li>
-              <li>比較美化前後的差異</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- 學習任務 -->
-        <section class="task" id="task" aria-labelledby="task-title">
-          <span class="task-icon" aria-hidden="true">✓</span>
-          <div>
-            <h2 id="task-title">換你動手做！</h2>
-            <p>修改姓名、自我介紹與背景顏色，完成後繳交作品截圖。</p>
-          </div>
-        </section>
       </section>
     </main>
 
